@@ -25,7 +25,7 @@ Follow these steps to set up the `.env` file:
 2. Open the `.env` file in a text editor.
 
 3. Add the following line to the `.env` file:
-    REACT_APP_CHATGPT_API_KEY=YOUR_API_KEY_HERE
+    `REACT_APP_CHATGPT_API_KEY=YOUR_API_KEY_HERE`
 
 
 Replace `YOUR_API_KEY_HERE` with your actual ChatGPT API key.
