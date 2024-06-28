@@ -11,6 +11,10 @@ module.exports = {
         montserratAlt: ['Montserrat Alternates', ...defaultTheme.fontFamily.sans],
         pacifico: ['Pacifico', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        'pink-outline': '#FED2DD'
+      }
+
     },
   },
   plugins: [],

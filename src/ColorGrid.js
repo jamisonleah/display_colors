@@ -26,20 +26,40 @@ const ColorGrid = ({ colors }) => {
 
   return (
     <div className="grid grid-cols-5 gap-1 mx-1">
-      {Object.entries(colors).map(([name, hex]) => (
-        <div key={name} className="flex flex-row items-center ">
-          <div
-            className={`w-44 h-44 rounded-full mb-2 shadow-inner flex items-center justify-center p-10 ${determineTextColor(hex)} `}
-            style={{ backgroundColor: hex }}
-          >
-             <div className="text-center">
-              <div className="text-md font-montserratAlt">{cleanAndFormatText(name)}</div>
-              <div className="text-sm font-mitr">{hex}</div>
-              </div>
-          </div>
-        </div>
-      ))}
-    </div>
+    {/* First group of colors */}
+    {Object.entries(colors)
+        .slice(0, 5) // Slice the first 5 colors
+        .map(([name, hex]) => (
+            <div key={name} className="flex flex-row items-center mt-20">
+                <div
+                    className={`w-10 h-10 rounded-full mb-2 shadow-inner border-pink-outline hover:ring-2 hover:ring-pink-200 hover:border-pink-200 flex items-center justify-center p-10 ${determineTextColor(hex)}`}
+                    style={{ backgroundColor: hex }}
+                ></div>
+            </div>
+        ))}
+        
+    {/* Button in the middle */}
+    <span> </span> 
+    <button
+        className="col-span-3 mt-4 px-20 py-1 bg-pink-outline text-black rounded-xl"
+    >
+        Export Json 
+    </button>
+    <span> </span>
+    
+    {/* Second group of colors */}
+    {Object.entries(colors)
+        .slice(5) // Slice from the 6th color to the end
+        .map(([name, hex]) => (
+            <div key={name} className="flex flex-row items-center mt-5">
+                <div
+                    className={`w-10 h-10 rounded-full mb-2 shadow-inner border-pink-outline hover:ring-2 hover:ring-pink-200 hover:border-pink-200 flex items-center justify-center p-10 ${determineTextColor(hex)}`}
+                    style={{ backgroundColor: hex }}
+                ></div>
+            </div>
+        ))}
+</div>
+
   );
 };
 
