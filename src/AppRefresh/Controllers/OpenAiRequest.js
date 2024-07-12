@@ -9,7 +9,7 @@ export const fetchJson = async (props) => {
         "messages": [
           {
             "role": "system",
-            "content": "You are a color expert helping a web designer create a harmonious color palette with creative names for a new web application. Provide 10 hex colors that work well together and respond only with JSON in the format: {\"color-name\": \"hex-value\"}."
+            "content": "You are a color expert create a harmonious color palette with creative names. Provide 10 hex colors that work well together given the prompt and respond only with JSON in the format: {\"color-name\": \"hex-value\"}."
           },
           {
             "role": "user",
